@@ -17,7 +17,7 @@ namespace ExemploStrategy
             }
             else
             {
-                return conta.Saldo * 0.06;
+                return conta.Saldo * 0.006;
 
             }
         }
