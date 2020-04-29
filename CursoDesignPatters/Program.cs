@@ -17,16 +17,29 @@ namespace CursoDesignPatters
             //Console.WriteLine(iccc.Calcula(orcamento));
 
 
-            CalculadorDeDescontos calculador = new CalculadorDeDescontos();
+            //CalculadorDeDescontos calculador = new CalculadorDeDescontos();
 
+            //Orcamento orcamento = new Orcamento(500.0);
+            //orcamento.AdicionaItem(new Item("CANETA", 250.0));
+            //orcamento.AdicionaItem(new Item("LAPIS", 250.0));
+
+            //double desconto = calculador.Calcula(orcamento);
+
+
+            //Template Method
             Orcamento orcamento = new Orcamento(500.0);
-            orcamento.AdicionaItem(new Item("CANETA", 250.0));
+            orcamento.AdicionaItem(new Item("CANETA", 500.0));
             orcamento.AdicionaItem(new Item("LAPIS", 250.0));
 
-            double desconto = calculador.Calcula(orcamento);
+            var icpp = new ICPP();
 
-            Console.WriteLine(desconto);
-            
+
+            CalculadorDeImpostos calculador = new CalculadorDeImpostos();
+
+
+            calculador.RealizaCalculo(orcamento, icpp);
+
+
         }
     }
 }
